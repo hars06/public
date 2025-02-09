@@ -1,0 +1,387 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position:relative;
+    height:60px;
+}
+
+.phone-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.875rem;
+    gap: 0.25rem;
+}
+
+.phone-link:hover {
+    color: #4B5563;
+}
+
+.logo {
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+
+}
+
+.nav-container {
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.main-nav {
+    display: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-nav a:hover {
+    color: #4B5563;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display:flex;
+    align-items: center;
+}
+
+.video-overlay .video-phone-link {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.video-overlay .video-phone-link:hover {
+    background: white;
+    color: black;
+}
+
+.video-overlay .video-phone-link svg {
+    width: 24px;
+    height: 24px;
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 2rem;
+}
+
+.video-overlay h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.video-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+/* Features */
+.features {
+    padding: 4rem 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #F9FAFB;
+    border-radius: 0.5rem;
+}
+
+.feature-icon {
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #4B5563;
+}
+
+/* Services */
+.services {
+    padding: 4rem 1rem;
+    background: #F9FAFB;
+}
+
+.services h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.service-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-row span:last-child {
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.footer a:hover {
+    color: #D1D5DB;
+}
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/* Media Queries */
+/* Media Queries */
+@media (min-width: 768px) {
+    .main-nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .phone-link {
+        display: none;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .header-content {
+        padding: 0.5rem 1rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .nav-container {
+        margin-left: auto;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .phone-link {
+        display: flex;
+    }
+}
+/* About Us Section - Main Page */
+.about-us {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+.about-us h2{
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.about-image-main,
+.about-image-tools {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-images {
+        order: -1;
+    }
+}
