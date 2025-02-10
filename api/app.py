@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__, 
-    template_folder='html',
+    template_folder='public',
     static_folder='.',
     static_url_path=''  # Add this line
 )
