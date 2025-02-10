@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ODEMKEY</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/services.css') }}">
+</head>
+<body>
+    <!-- Header -->
+ 
+<header class="header">
+    <div class="header-content">
+        <a href="index.html" class="logo">ODEMKEY</a>
+        <div class="nav-container">
+            <nav class="main-nav">
+                <a href="{{ url_for('about') }}">ABOUT</a>
+                <a href="{{ url_for('contact') }}">CONTACT</a>
+                <a href="{{ url_for('services') }}">SERVICES</a>
+            </nav>
+            <button class="menu-button" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Services Content -->
+    <section class="services-content">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Emergency Services -->
+                <div class="service-category">
+                    <h2>Emergency Services</h2>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <h3>Emergency Door Opening</h3>
+                            <p>24/7 emergency service for locked-out situations</p>
+                            <span class="price">from 1500 CZK</span>
+                        </div>
+                        <div class="service-item">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installation Services -->
+                <div class="service-category">
+                    <h2>Installation Services</h2>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <h3>Lock Replacement</h3>
+                            <p>Complete lock replacement and new installation</p>
+                            <span class="price">from 2500 CZK</span>
+                        </div>
+                        <div class="service-item">
+                            <h3>Security System Installation</h3>
+                            <p>Installation of modern security solutions</p>
+                            <span class="price">Price on request</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Services -->
+                <div class="service-category">
+                    <h2>Security Services</h2>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <h3>Security Consultation</h3>
+                            <p>Expert advice and recommendations</p>
+                            <span class="price">Free</span>
+                        </div>
+                        <div class="service-item">
+                            <h3>Security Audits</h3>
+                            <p>Comprehensive security assessment</p>
+                            <span class="price">from 3000 CZK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h2>ODEMKEY</h2>
+            <p>Professional Locksmith Services</p>
+            <a href="tel:+420777959513">+420 777 959 513</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
