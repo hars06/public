@@ -3,25 +3,19 @@ from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-
 app = Flask(__name__, 
-    template_folder='public',
-    static_folder='.',
-    static_url_path=''  # Add this line
+    template_folder='templates',  # Make sure this points to correct folder
+    static_folder='static'
 )
 
-# Set up static file serving
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Add this line for development
+@app.errorhandler(500)
+def internal_error(error):
+    app.logger.error(f'Server Error: {error}')
+    return "Internal Server Error", 500
 
-# Mail configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('EMAIL_USER')
-app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
-
-mail = Mail(app)
+@app.errorhandler(404)
+def not_found_error(error):
+    return "Page Not Found", 404
 
 @app.route('/') 
 def index():

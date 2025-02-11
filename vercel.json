@@ -16,18 +16,6 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/static/favicon.ico"
-    },
-    {
-      "src": "/(.*)\\.html",
-      "dest": "app.py"
-    },
-    {
-      "src": "/",
-      "dest": "app.py"
-    },
-    {
       "src": "/(.*)",
       "dest": "app.py"
     }
